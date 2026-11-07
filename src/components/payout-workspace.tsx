@@ -106,7 +106,7 @@ export function PayoutWorkspace() {
   }
 
   return (
-    <main className="min-h-screen bg-[#f5f7f8] text-slate-900">
+    <div className="min-h-screen bg-[#f5f7f8] text-slate-900">
       <div className="mx-auto max-w-7xl px-4 py-7 sm:px-7 lg:px-10">
         <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
           <div><p className="text-xs font-bold uppercase tracking-[.18em] text-emerald-800">GDG Ilorin × Blaaiz Buildathon</p><h1 className="mt-1 text-2xl font-bold tracking-tight sm:text-3xl">Payout operations</h1><p className="mt-1 text-sm text-slate-500">Manage cross-border seller payouts from one clear workspace.</p></div>
@@ -145,7 +145,7 @@ export function PayoutWorkspace() {
 
         <div className="mt-6 flex flex-wrap items-center justify-between gap-2 rounded-xl border border-slate-200 bg-white/70 px-4 py-3 text-xs text-slate-500"><span>MarketBridge · GDG Ilorin × Blaaiz Buildathon</span><span>Illustrative demo environment · Not a live payout service</span></div>
       </div>
-    </main>
+    </div>
   );
 }
 

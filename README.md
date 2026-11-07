@@ -2,7 +2,7 @@
 
 Cross-border marketplace payout management demo for the **GDG Ilorin × Blaaiz Buildathon**.
 
-The default dashboard demonstrates the operator journey: choose a seller, enter an amount and destination, review an illustrative FX and fee estimate, create a mock payout, and inspect its details and status timeline. **This app does not connect to Blaaiz, execute payouts, quote live FX, or move money.** No verified Blaaiz sandbox credentials were available during implementation.
+The landing page introduces the payout journey and includes an editable illustrative estimate. Open `/payouts` to choose a seller, review the fee and estimated recipient amount, create a mock payout, and inspect its details and status timeline. **This app does not connect to Blaaiz, execute payouts, quote live FX, or move money.** No verified Blaaiz sandbox credentials were available during implementation.
 
 ## Demo behavior
 
@@ -24,7 +24,7 @@ npm ci
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000). The payout dashboard works without environment variables. Configure `.env.local` only when exercising the existing authenticated seller or Neon-backed marketplace workflows.
+Open [http://localhost:3000](http://localhost:3000) for the landing page and [http://localhost:3000/payouts](http://localhost:3000/payouts) for the payout dashboard. Both work without environment variables. Configure `.env.local` only when exercising the existing authenticated seller or Neon-backed marketplace workflows.
 
 ### Existing marketplace environment variables
 

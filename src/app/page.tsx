@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import { PayoutWorkspace } from "@/components/payout-workspace";
+import { MarketBridgeLandingPage } from "@/components/marketbridge-landing-page";
 
 export const metadata: Metadata = {
-  title: "Payout dashboard",
-  description: "Create and track clearly labelled simulated cross-border payouts.",
+  title: "Cross-border payouts, made clear",
+  description:
+    "See how MarketBridge helps marketplace teams create and track simulated cross-border seller payouts.",
 };
 
 export default function HomePage() {
-  return <PayoutWorkspace />;
+  return <MarketBridgeLandingPage />;
 }
