@@ -13,7 +13,7 @@ The landing page introduces the payout journey and includes an editable illustra
 
 ## Existing application functionality
 
-The original marketplace remains available at `/marketplace`, with listing and booking routes intact. `/admin`, `/provider`, `/seller`, `/sign-in`, `/sign-up`, and `/playground` also remain available. Existing seller authentication uses Clerk; runtime marketplace bookings and simulated payment attempts use Neon PostgreSQL. These features are separate from the browser-local payout demonstration.
+The original marketplace remains available at `/marketplace`, with listing and booking routes intact. `/admin`, `/provider`, `/seller`, `/sign-in`, and `/sign-up` also remain available. The former `/playground` URL redirects to the payout workspace. Existing seller authentication uses Clerk; runtime marketplace bookings and simulated payment attempts use Neon PostgreSQL. These features are separate from the browser-local payout demonstration.
 
 The project continues to use Next.js App Router, React, TypeScript, Tailwind CSS, Clerk (optional seller authentication), and Neon PostgreSQL. It has not migrated to Firebase.
 
@@ -38,7 +38,7 @@ See `.env.example` for the full list. Key values include:
 | `ADMIN_CLERK_USER_IDS` | Server-only allowlist for `/admin` |
 | `DEMO_ACCESS_TOKEN` | Optional shared gate for protected demo pages |
 
-Never expose server secrets through `NEXT_PUBLIC_*` variables or commit credentials. No Blaaiz variables are currently used by this demo.
+Never expose server secrets through `NEXT_PUBLIC_*` variables or commit credentials. Blaaiz documents OAuth 2.0 client credentials for new API integrations; this version does not read OAuth credentials, request tokens, or make Blaaiz API calls. No Blaaiz credentials are configured in the repository. See [Blaaiz authentication](https://docs.blaaiz.com/docs/guides/authentication) and [payout requirements](https://docs.blaaiz.com/docs/payments/payout/create-a-payout) before implementing the provider flow.
 
 ## Database
 

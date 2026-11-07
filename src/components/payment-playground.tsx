@@ -93,7 +93,7 @@ export function PaymentPlayground({
             Simulation only · no real money moves
           </p>
           <p className="mt-0.5 text-sm text-amber-900/80">
-            This browser-only learning tool makes no Stripe or Paystack calls, creates no booking, and saves no data.
+            This browser-only legacy tool makes no payment provider calls, creates no booking, and saves no data.
           </p>
         </div>
       </div>}

@@ -30,18 +30,18 @@ export default function MarketplacePage({
               {BRAND.tagline}
             </h1>
             <p className="mt-4 max-w-lg text-base leading-7 text-[var(--color-ink-muted)]">
-              Explore fictional Nigerian services and labelled payment modes —
-              before any real money moves.
+              Explore the original marketplace, then use the MarketBridge
+              payout workspace to preview cross-border seller transfers.
             </p>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
               <a href="#services" className="btn-primary min-h-11 w-full sm:w-auto">
                 Browse listings
               </a>
               <Link
-                href="/playground"
+                href="/payouts"
                 className="focus-ring inline-flex min-h-11 w-full items-center justify-center rounded-md border border-[var(--color-brand)] px-4 py-2 font-semibold text-[var(--color-brand)] transition-colors hover:bg-[var(--color-brand-soft)] sm:w-auto"
               >
-                Open payment playground
+                Open payout workspace
               </Link>
               <Link
                 href="/sign-up"
@@ -127,7 +127,7 @@ export default function MarketplacePage({
             distinct from provider-confirmed payment.
           </p>
           <p className="mt-2 text-sm font-semibold text-[var(--color-ink)]">
-            Try the <Link href="/playground" className="text-[var(--color-brand)] underline">browser-only payment playground</Link> for a guided fee split and sample lifecycle.
+            Explore the <Link href="/payouts" className="text-[var(--color-brand)] underline">cross-border payout workspace</Link> for an illustrative transfer estimate and transaction tracker.
           </p>
           <div className="mt-6">
             <PaymentModeLegend />

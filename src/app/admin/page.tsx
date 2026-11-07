@@ -21,7 +21,6 @@ import {
   groupPaymentAttempts,
   summarizeBookingsBySourceAndCurrency,
 } from "@/lib/admin-dashboard-summary";
-import { getStripeConnectReadiness } from "@/lib/stripe/config";
 import {
   formatDateTime,
   formatMoney,
@@ -51,7 +50,6 @@ export default async function AdminPage() {
     );
   }
   const databaseConfigured = Boolean(getDatabaseUrl());
-  const stripeReadiness = getStripeConnectReadiness();
   const runtimeCount = bookings.filter((b) => b.dataSource === "mock").length;
   const bookingGroups = summarizeBookingsBySourceAndCurrency(bookings);
   const paymentAttemptGroups = groupPaymentAttempts(paymentAttempts);
@@ -97,15 +95,18 @@ export default async function AdminPage() {
 
       <section
         className="mt-4 rounded-lg border border-sky-300 bg-sky-50 px-4 py-3 text-sm text-sky-950"
-        aria-labelledby="stripe-readiness-title"
+        aria-labelledby="blaaiz-status-title"
       >
-        <h2 id="stripe-readiness-title" className="font-semibold">
-          Stripe Connect readiness: {stripeReadiness.label}
+        <h2 id="blaaiz-status-title" className="font-semibold">
+          Blaaiz sandbox: access pending · mock mode active
         </h2>
-        <p className="mt-1">{stripeReadiness.message}</p>
+        <p className="mt-1">
+          This demo does not currently authenticate with Blaaiz or call its payout
+          API. Estimates and status changes are illustrative; no funds move.
+        </p>
         <p className="mt-1 text-xs">
-          Payment operations: unavailable · Country, currency, and capability
-          eligibility: unverified
+          Provider connection requires provisioned sandbox OAuth credentials and
+          payout setup. No credentials are stored in this application.
         </p>
       </section>
 

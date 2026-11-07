@@ -125,7 +125,7 @@ export function buildDemoStudioSnapshot(
     payments,
     currencySummaries,
     // A preview is shown only for a successful simulated outcome. It never
-    // represents a Stripe payout or triggers a transfer.
+    // represents a provider payout or triggers a transfer.
     payoutExamples: payments.filter(
       ({ transaction }) => transaction.outcome === "success",
     ),

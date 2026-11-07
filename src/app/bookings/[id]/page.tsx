@@ -111,7 +111,7 @@ export default async function BookingPage({
           role="status"
         >
           This booking is labelled <strong>paid</strong> only as illustrative
-          seed data. It is not a Stripe or Paystack confirmation, and it is not
+          seed data. It is not a payment provider confirmation, and it is not
           a local simulated payment either.
         </div>
       )}

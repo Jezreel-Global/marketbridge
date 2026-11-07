@@ -110,7 +110,7 @@ export function PayoutWorkspace() {
       <div className="mx-auto max-w-7xl px-4 py-7 sm:px-7 lg:px-10">
         <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
           <div><p className="text-xs font-bold uppercase tracking-[.18em] text-emerald-800">GDG Ilorin × Blaaiz Buildathon</p><h1 className="mt-1 text-2xl font-bold tracking-tight sm:text-3xl">Payout operations</h1><p className="mt-1 text-sm text-slate-500">Manage cross-border seller payouts from one clear workspace.</p></div>
-          <span className="inline-flex items-center gap-2 rounded-full border border-amber-300 bg-amber-50 px-3 py-1.5 text-xs font-bold text-amber-900"><span className="h-2 w-2 rounded-full bg-amber-500" /> DEMO MODE · SIMULATED</span>
+          <span className="inline-flex items-center gap-2 rounded-full border border-amber-300 bg-amber-50 px-3 py-1.5 text-xs font-bold text-amber-900"><span className="h-2 w-2 rounded-full bg-amber-500" /> MOCK MODE · BLAAIZ NOT CONNECTED</span>
         </div>
 
         <div className="mb-6 grid gap-3 sm:grid-cols-3">

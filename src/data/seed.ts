@@ -9,7 +9,7 @@ import type {
 
 /**
  * All Milestone 1 data is fictional seed data.
- * Nothing here represents a real Stripe, Paystack, or bank transaction.
+ * Nothing here represents a real payment provider or bank transaction.
  */
 export const SEED_META = {
   label: "SIMULATED DATA",
@@ -31,7 +31,7 @@ export const providers: ServiceProvider[] = [
     isMock: true,
     onboardingStatus: "unavailable",
     onboardingNote:
-      "Fictional provider profile only. No Stripe Connect or Paystack account is linked.",
+      "Fictional provider profile only. No payment provider account is linked.",
     payoutStatus: "none",
   },
   {
@@ -283,7 +283,7 @@ export const paymentAttempts: PaymentAttemptRecord[] = [
     status: "succeeded",
     amount: { amountMinor: 4_000_000, currency: "NGN" },
     dataSource: "seed",
-    note: "Simulated success baked into seed data — not Stripe or Paystack.",
+    note: "Simulated success baked into seed data — not provider-confirmed.",
     createdAt: "2026-10-08T11:06:00+01:00",
   },
 ];

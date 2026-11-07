@@ -94,8 +94,8 @@ export default async function SellerProfilePage() {
           <h2 className="font-semibold">{profile.displayName}</h2>
           <p className="mt-2 text-sm text-[var(--color-ink-muted)]">
             This profile belongs to your signed-in account. It is separate from
-            fictional marketplace providers and has no Stripe account,
-            onboarding status, payment activity, or payout capability.
+            the fictional marketplace providers and is not connected to the
+            Blaaiz sandbox or payout flow.
           </p>
           <div className="mt-4 flex flex-wrap gap-4 text-sm">
             <Link className="text-[var(--color-brand)] underline" href="/#services">Browse marketplace listings</Link>

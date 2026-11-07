@@ -13,7 +13,6 @@ import { BRAND } from "@/lib/brand";
 const links = [
   { href: "/payouts", label: "Payout dashboard" },
   { href: "/marketplace", label: "Marketplace" },
-  { href: "/playground", label: "Payment playground" },
   { href: "/seller", label: "Seller account" },
   { href: "/sign-in", label: "Sign in" },
   { href: "/sign-up", label: "Create account" },
@@ -21,13 +20,12 @@ const links = [
   { href: "/admin", label: "Admin tools · restricted" },
 ] as const;
 
-const primaryLinks = [links[0], links[1], links[2]] as const;
-const accountLinks = [links[3], links[4], links[5]] as const;
-const additionalLinks = [links[6], links[7]] as const;
+const primaryLinks = [links[0], links[1]] as const;
+const accountLinks = [links[2], links[3], links[4]] as const;
+const additionalLinks = [links[5], links[6]] as const;
 const primaryLabels: Record<(typeof primaryLinks)[number]["href"], string> = {
   "/payouts": "Payout dashboard",
   "/marketplace": "Marketplace",
-  "/playground": "Demo Studio",
 };
 
 function isActiveLink(pathname: string | null, href: (typeof links)[number]["href"]) {
@@ -148,7 +146,6 @@ function HeaderShell({
               <Link href="/#product" onClick={onNavigate} className="focus-ring rounded-md px-3 py-2 text-sm font-medium">Product</Link>
               <Link href="/#how-it-works" onClick={onNavigate} className="focus-ring rounded-md px-3 py-2 text-sm font-medium">How it works</Link>
               <NavigationLink href="/marketplace" label="For teams" pathname={pathname} onClick={onNavigate} />
-              <NavigationLink href="/playground" label="Payment playground" pathname={pathname} onClick={onNavigate} />
               <NavigationLink href="/seller" label="Seller account" pathname={pathname} onClick={onNavigate} />
             </>
           ) : links.map((link) => (
