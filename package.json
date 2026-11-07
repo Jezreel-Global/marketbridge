@@ -1,5 +1,5 @@
 {
-  "name": "marketplace-demo",
+  "name": "marketbridge",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "test": "tsx --test tests/marketplace-repository.test.ts tests/stripe-readiness.test.ts tests/seller-auth.test.ts tests/admin-auth.test.ts tests/admin-dashboard-summary.test.ts tests/payment-playground.test.ts",
+    "test": "tsx --test tests/marketplace-repository.test.ts tests/stripe-readiness.test.ts tests/seller-auth.test.ts tests/admin-auth.test.ts tests/admin-dashboard-summary.test.ts tests/payment-playground.test.ts tests/payout-mock.test.ts",
     "test:db": "tsx --test tests/marketplace-repository.db.test.ts",
     "db:migrate": "tsx scripts/db-migrate.ts",
     "db:reset-demo": "tsx scripts/db-reset-demo.ts",
@@ -16,7 +16,7 @@
   "dependencies": {
     "@clerk/nextjs": "^7.9.16",
     "@neondatabase/serverless": "^1.2.0",
-    "next": "16.4.0",
+    "next": "16.4.5",
     "react": "19.3.0",
     "react-dom": "19.3.0",
     "ws": "^8.22.0"
@@ -28,9 +28,14 @@
     "@types/react-dom": "^19",
     "@types/ws": "^8.18.2",
     "eslint": "^9",
-    "eslint-config-next": "16.4.0",
+    "eslint-config-next": "16.4.5",
     "tailwindcss": "^4",
     "tsx": "^4.23.15",
     "typescript": "^5"
+  },
+  "overrides": {
+    "@typescript-eslint/typescript-estree": {
+      "minimatch": "11.0.3"
+    }
   }
 }

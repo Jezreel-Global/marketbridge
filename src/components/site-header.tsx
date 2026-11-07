@@ -8,7 +8,8 @@ import { HamburgerMenuButton } from "@/components/hamburger-menu-button";
 import { BRAND } from "@/lib/brand";
 
 const links = [
-  { href: "/#services", label: "Browse services" },
+  { href: "/", label: "Dashboard" },
+  { href: "/marketplace", label: "Marketplace" },
   { href: "/playground", label: "Payment playground" },
   { href: "/seller", label: "Seller account" },
   { href: "/sign-in", label: "Sign in" },
@@ -18,17 +19,17 @@ const links = [
 ] as const;
 
 const primaryLinks = [links[0], links[1], links[2]] as const;
-const accountLinks = [links[3], links[4]] as const;
-const additionalLinks = [links[5], links[6]] as const;
+const accountLinks = [links[3], links[4], links[5]] as const;
+const additionalLinks = [links[6], links[7]] as const;
 const primaryLabels: Record<(typeof primaryLinks)[number]["href"], string> = {
-  "/#services": "Browse",
+  "/": "Dashboard",
+  "/marketplace": "Marketplace",
   "/playground": "Demo Studio",
-  "/seller": "Seller",
 };
 
 function isActiveLink(pathname: string | null, href: (typeof links)[number]["href"]) {
   if (!pathname) return false;
-  return href === "/#services"
+  return href === "/"
     ? pathname === "/"
     : pathname === href || pathname.startsWith(`${href}/`);
 }

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { DemoStudio } from "@/components/demo-studio";
 
 export const metadata: Metadata = {
-  title: "Marketplace Demo Studio",
+  title: "Legacy marketplace demo studio",
   description: "Explore a simulated marketplace payment dashboard with NGN and USD examples.",
 };
 

@@ -42,9 +42,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
               <span className="font-[family-name:var(--font-display)] font-semibold text-[var(--color-ink)]">
                 {BRAND.name}
               </span>{" "}
-              — hackathon learning project. Not a production payments platform.
+              — GDG Ilorin × Blaaiz Buildathon demo. Not a live payout service.
             </p>
-            <p>Seller profiles require sign-in · simulated payments only</p>
+            <p>Illustrative FX and fees · mock payouts only</p>
           </div>
         </footer>
       </body>

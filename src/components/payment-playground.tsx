@@ -65,7 +65,7 @@ export function PaymentPlayground({
     <div className={embedded ? "w-full" : "mx-auto max-w-7xl px-4 pb-14 pt-5 sm:px-6 sm:pb-16 sm:pt-8 lg:px-8"}>
       {!embedded && <div className="mb-6 flex flex-wrap items-center justify-between gap-3 border-b border-[var(--color-line)] pb-4 text-sm">
         <p className="font-medium text-[var(--color-ink-muted)]">
-          Marketplace Integration Lab <span className="px-1 text-[var(--color-line)]">/</span>{" "}
+          MarketBridge <span className="px-1 text-[var(--color-line)]">/</span>{" "}
           <span className="text-[var(--color-ink)]">Demo Studio</span>
         </p>
         <nav aria-label="Demo Studio" className="flex items-center gap-1">
