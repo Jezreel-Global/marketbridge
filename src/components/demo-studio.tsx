@@ -79,7 +79,7 @@ function SimulationDisclosure() {
       <div>
         <p className="text-sm font-bold">Demo data · simulated payments · no real money moves</p>
         <p className="mt-0.5 text-xs leading-5 text-amber-900/80">
-          This browser-only studio uses deterministic examples. It does not contact Stripe or Paystack, create an account, save data, or move funds.
+          This browser-only studio uses deterministic examples. It does not contact a payment provider, create an account, save data, or move funds.
         </p>
       </div>
     </div>
@@ -229,12 +229,12 @@ function Overview({
               </div>
             ))}
           </dl>
-          <p className="mt-3 text-xs leading-5 text-[var(--color-ink-muted)]">These figures are not collected revenue, a Stripe balance, or seller earnings.</p>
+          <p className="mt-3 text-xs leading-5 text-[var(--color-ink-muted)]">These figures are not collected revenue, provider balances, or seller earnings.</p>
         </section>
       </section>
 
       <div className="mt-5 flex flex-col gap-2 rounded-lg border border-[var(--color-line)] bg-white px-4 py-3 text-xs leading-5 text-[var(--color-ink-muted)] sm:flex-row sm:items-center sm:justify-between sm:px-5">
-        <p>Illustrative booking snapshots are not collected revenue, a Stripe balance, or provider earnings.</p>
+        <p>Illustrative booking snapshots are not collected revenue, provider balances, or provider earnings.</p>
         <button onClick={() => onNavigate("earnings")} className="focus-ring w-fit font-semibold text-[var(--color-brand)] hover:underline">See the earnings explanation →</button>
       </div>
     </>
@@ -351,7 +351,7 @@ function Reports({ snapshot }: { snapshot: ReturnType<typeof buildDemoStudioSnap
   return (
     <>
       <PageHeading eyebrow="Sample reporting" title="Reports" description="A compact view of fixture counts and simulated outcomes, grouped by currency." />
-      <div className="mb-5 rounded-lg border border-[var(--color-line)] bg-white px-4 py-3 text-sm text-[var(--color-ink-muted)]">Report figures summarize deterministic browser fixtures. They are not processing volume, collected revenue, Stripe balance activity, or payouts.</div>
+      <div className="mb-5 rounded-lg border border-[var(--color-line)] bg-white px-4 py-3 text-sm text-[var(--color-ink-muted)]">Report figures summarize deterministic browser fixtures. They are not processing volume, collected revenue, provider balance activity, or payouts.</div>
       <section className="grid gap-4 xl:grid-cols-2">{snapshot.currencySummaries.map((summary) => <article key={summary.currency} className="demo-panel rounded-lg border bg-white"><div className="border-b border-[var(--color-line)] px-4 py-4"><h2 className="text-lg font-bold">{summary.currency} report</h2><p className="mt-1 text-sm text-[var(--color-ink-muted)]">{summary.paymentCount} fixed example{summary.paymentCount === 1 ? "" : "s"}</p></div><dl className="divide-y divide-[var(--color-line)]"><SummaryLine label="Successful simulations" value={String(snapshot.payments.filter((item) => item.transaction.currency === summary.currency && item.transaction.outcome === "success").length)} /><SummaryLine label="Pending simulations" value={String(snapshot.payments.filter((item) => item.transaction.currency === summary.currency && item.transaction.outcome === "pending").length)} /><SummaryLine label="Failed simulations" value={String(summary.failedCount)} /><SummaryLine label="Illustrative booking amount" value={formatMoney({ amountMinor: summary.customerAmount, currency: summary.currency })} emphasis /></dl></article>)}</section>
     </>
   );
@@ -361,7 +361,7 @@ function Earnings({ snapshot }: { snapshot: ReturnType<typeof buildDemoStudioSna
   return (
     <>
       <PageHeading eyebrow="Internal demo ledger" title="Earnings & payouts" description="Keep every currency separate and distinguish a booking split from collected money and an actual payout." />
-      <div className="mb-5 rounded-xl border border-sky-200 bg-sky-50 p-4 text-sky-950 sm:p-5"><p className="text-sm font-bold">No transfer or payout is performed</p><p className="mt-1 text-sm leading-6 text-sky-900/80">Amounts below are internal illustrations derived from the sample booking snapshots. They are not Stripe balances, collected revenue, or seller earnings.</p></div>
+      <div className="mb-5 rounded-xl border border-sky-200 bg-sky-50 p-4 text-sky-950 sm:p-5"><p className="text-sm font-bold">No transfer or payout is performed</p><p className="mt-1 text-sm leading-6 text-sky-900/80">Amounts below are internal illustrations derived from the sample booking snapshots. They are not provider balances, collected revenue, or seller earnings.</p></div>
       <div className="grid gap-5 xl:grid-cols-2">
         {snapshot.currencySummaries.map((summary) => (
           <section key={summary.currency} className="overflow-hidden rounded-xl border border-[var(--color-line)] bg-white shadow-sm">
@@ -393,10 +393,10 @@ function ProviderAccount() {
   return (
     <>
       <PageHeading eyebrow="Provider account" title="Onboarding overview" description="A sample business profile and checklist illustrate the kinds of steps a marketplace might present." />
-      <div className="mb-5 flex flex-col gap-4 rounded-xl border border-amber-200 bg-amber-50 p-4 sm:flex-row sm:items-center sm:justify-between sm:p-5"><div><p className="font-bold text-amber-950">Example requirements notice</p><p className="mt-1 max-w-3xl text-sm leading-6 text-amber-900/80">This notice is fictional. It is not returned by Stripe and does not establish account status, verification, country eligibility, or a supported payment flow.</p></div><span className="w-fit shrink-0 rounded-full border border-amber-300 bg-white px-3 py-1.5 text-xs font-semibold text-amber-900">Needs attention · demo</span></div>
+      <div className="mb-5 flex flex-col gap-4 rounded-xl border border-amber-200 bg-amber-50 p-4 sm:flex-row sm:items-center sm:justify-between sm:p-5"><div><p className="font-bold text-amber-950">Example requirements notice</p><p className="mt-1 max-w-3xl text-sm leading-6 text-amber-900/80">This notice is fictional. It does not establish account status, verification, country eligibility, or a supported payment flow.</p></div><span className="w-fit shrink-0 rounded-full border border-amber-300 bg-white px-3 py-1.5 text-xs font-semibold text-amber-900">Needs attention · demo</span></div>
       <div className="grid items-start gap-5 xl:grid-cols-[minmax(0,1.35fr)_minmax(280px,0.8fr)]">
         <section className="overflow-hidden rounded-xl border border-[var(--color-line)] bg-white shadow-sm"><div className="border-b border-[var(--color-line)] px-4 py-4 sm:px-5"><h2 className="font-[family-name:var(--font-display)] text-lg font-bold">Example onboarding checklist</h2><p className="mt-1 text-xs text-[var(--color-ink-muted)]">No identity or business details are saved or submitted.</p></div><div className="divide-y divide-[var(--color-line)]">{checklist.map((item) => <div key={item.title} className="flex flex-wrap items-center justify-between gap-3 px-4 py-4 sm:px-5"><div className="min-w-0 flex-1"><p className="text-sm font-semibold">{item.title}</p><p className="mt-0.5 text-xs text-[var(--color-ink-muted)]">{item.note}</p></div><span className={`rounded-full border px-2.5 py-1 text-right text-xs font-semibold ${item.tone === "success" ? "border-emerald-200 bg-emerald-50 text-emerald-900" : item.tone === "attention" ? "border-amber-200 bg-amber-50 text-amber-900" : "border-[var(--color-line)] bg-[var(--color-canvas)] text-[var(--color-ink-muted)]"}`}>{item.state}</span></div>)}</div></section>
-        <aside className="rounded-xl border border-[var(--color-line)] bg-white p-5 shadow-sm"><p className="text-xs font-bold uppercase tracking-wide text-[var(--color-ink-muted)]">Fictional business profile</p><h2 className="mt-3 font-[family-name:var(--font-display)] text-xl font-bold">Northstar Portrait Studio</h2><p className="mt-1 text-sm text-[var(--color-ink-muted)]">Sample provider · Lagos</p><dl className="mt-5 divide-y divide-[var(--color-line)] border-y border-[var(--color-line)] text-sm"><SummaryLine label="Onboarding" value="Simulated" /><SummaryLine label="Stripe account" value="None" /><SummaryLine label="Data persistence" value="None" /></dl><p className="mt-3 text-xs leading-5 text-[var(--color-ink-muted)]">This provider is a fictional fixture and is not associated with a real seller profile.</p></aside>
+        <aside className="rounded-xl border border-[var(--color-line)] bg-white p-5 shadow-sm"><p className="text-xs font-bold uppercase tracking-wide text-[var(--color-ink-muted)]">Fictional business profile</p><h2 className="mt-3 font-[family-name:var(--font-display)] text-xl font-bold">Northstar Portrait Studio</h2><p className="mt-1 text-sm text-[var(--color-ink-muted)]">Sample provider · Lagos</p><dl className="mt-5 divide-y divide-[var(--color-line)] border-y border-[var(--color-line)] text-sm"><SummaryLine label="Onboarding" value="Simulated" /><SummaryLine label="Payment provider" value="Not connected" /><SummaryLine label="Data persistence" value="None" /></dl><p className="mt-3 text-xs leading-5 text-[var(--color-ink-muted)]">This provider is a fictional fixture and is not associated with a real seller profile.</p></aside>
       </div>
     </>
   );
@@ -420,7 +420,7 @@ export function DemoStudio() {
       <div className="flex min-h-screen flex-col lg:flex-row">
         <aside className="demo-sidebar sticky top-0 z-20 border-b border-[var(--color-line)] bg-white lg:fixed lg:inset-y-0 lg:flex lg:w-64 lg:flex-col lg:border-b-0 lg:border-r">
           <div className="flex items-center justify-between gap-3 px-4 py-4 lg:px-5 lg:py-5">
-            <Link href="/" aria-label="Marketplace Lab, return to marketplace home" className="focus-ring flex items-center gap-3 rounded-md"><span className="demo-logo grid h-10 w-10 place-items-center rounded-xl bg-[var(--color-brand)] font-[family-name:var(--font-display)] font-bold text-white">M</span><span><span className="block font-[family-name:var(--font-display)] text-base font-bold">Marketplace Lab</span><span className="block text-xs text-[var(--color-ink-muted)]">Demo Studio</span></span></Link>
+            <Link href="/" aria-label="MarketBridge dashboard" className="focus-ring flex items-center gap-3 rounded-md"><span className="demo-logo grid h-10 w-10 place-items-center rounded-xl bg-[var(--color-brand)] font-[family-name:var(--font-display)] font-bold text-white">M</span><span><span className="block font-[family-name:var(--font-display)] text-base font-bold">MarketBridge</span><span className="block text-xs text-[var(--color-ink-muted)]">Legacy demo studio</span></span></Link>
             <span className="rounded-full border border-amber-200 bg-amber-50 px-2 py-1 text-[10px] font-bold uppercase tracking-wide text-amber-900">Demo</span>
           </div>
           <nav aria-label="Demo Studio sections" className="flex gap-1 overflow-x-auto px-3 pb-3 lg:flex-1 lg:flex-col lg:overflow-y-auto lg:overflow-x-hidden lg:px-3 lg:pt-4">
@@ -447,7 +447,7 @@ export function DemoStudio() {
             {view === "earnings" && <Earnings snapshot={snapshot} />}
             {view === "account" && <ProviderAccount />}
             {view === "tools" && <><PageHeading eyebrow="Presenter tools" title="Configure a sample transaction" description="Select one scenario and outcome to update the related activity, currency summaries and payout previews in this browser session." /><PaymentPlayground embedded scenarioId={scenarioId} outcome={outcome} onScenarioChange={selectScenario} onOutcomeChange={setOutcome} /></>}
-            {view === "learning" && <><PageHeading eyebrow="Stripe resources" title="Continue learning about Stripe Connect" description="Use these resources to explore possible Connect approaches after reviewing the marketplace simulation." /><ConnectLearningResources /></>}
+            {view === "learning" && <><PageHeading eyebrow="Blaaiz integration" title="Blaaiz sandbox setup" description="Review provider setup requirements and the current mock-mode status." /><ConnectLearningResources /></>}
           </div>
         </div>
       </div>

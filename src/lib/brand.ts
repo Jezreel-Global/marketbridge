@@ -1,10 +1,10 @@
 /** Central brand strings — change here when the product name is finalised. */
 export const BRAND = {
-  name: "Marketplace Integration Lab",
-  shortName: "Marketplace Lab",
-  tagline: "Learn how marketplace payments work — with clearly labelled simulations.",
+  name: "MarketBridge",
+  shortName: "MarketBridge",
+  tagline: "Cross-border payouts, made clear.",
   description:
-    "A fictional Nigerian service marketplace for exploring Stripe Checkout, Stripe Connect eligibility, and Paystack — without confusing mock data for real money.",
+    "A payout operations workspace for creating and tracking clearly labelled simulated cross-border seller payouts.",
 } as const;
 
 export const PLATFORM_FEE_BPS = 1000; // 10% illustrative platform fee

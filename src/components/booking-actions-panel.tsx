@@ -95,8 +95,8 @@ export function BookingActionsPanel({
       </h2>
       <p className="mt-2 text-sm text-amber-900/90">
         These buttons only update the runtime demo store. They do{" "}
-        <strong>not</strong> call Stripe or Paystack, authorize cards, or move
-        real money. A “success” label is still a simulation.
+        <strong>not</strong> contact a payment provider, authorize cards, or
+        move real money. A “success” label is still a simulation.
       </p>
 
       <div className="mt-4 flex flex-wrap gap-3">

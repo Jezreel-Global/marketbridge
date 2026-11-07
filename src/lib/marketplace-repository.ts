@@ -278,7 +278,7 @@ export async function simulatePayment(
         dataSource: "mock",
         note:
           outcome === "success"
-            ? "Labelled simulated success in Neon Postgres. No Stripe/Paystack call; no real money moved."
+            ? "Labelled simulated success in Neon Postgres. No payment provider call; no real money moved."
             : "Labelled simulated failure in Neon Postgres. No provider was contacted.",
         createdAt: now,
       };
