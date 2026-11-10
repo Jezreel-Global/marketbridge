@@ -143,7 +143,7 @@ export function PayoutWorkspace() {
           </section>
         </div>
 
-        <div className="mt-6 flex flex-wrap items-center justify-between gap-2 rounded-xl border border-slate-200 bg-white/70 px-4 py-3 text-xs text-slate-500"><span>MarketBridge · GDG Ilorin × Blaaiz Buildathon</span><span>Illustrative demo environment · Not a live payout service</span></div>
+        <div className="mt-6 flex flex-wrap items-center justify-between gap-2 rounded-xl border border-slate-200 bg-white/70 px-4 py-3 text-xs text-slate-500"><span>KOJA · GDG Ilorin × Blaaiz Buildathon</span><span>Illustrative demo environment · Not a live payout service</span></div>
       </div>
     </div>
   );

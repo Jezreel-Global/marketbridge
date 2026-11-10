@@ -1,10 +1,10 @@
 /** Central brand strings — change here when the product name is finalised. */
 export const BRAND = {
-  name: "MarketBridge",
-  shortName: "MarketBridge",
-  tagline: "Cross-border payouts, made clear.",
+  name: "KOJA",
+  shortName: "KOJA",
+  tagline: "Move value across borders.",
   description:
-    "A payout operations workspace for creating and tracking clearly labelled simulated cross-border seller payouts.",
+    "An African-rooted payout workspace for previewing and tracking clearly labelled cross-border seller payouts.",
 } as const;
 
 export const PLATFORM_FEE_BPS = 1000; // 10% illustrative platform fee

@@ -420,7 +420,7 @@ export function DemoStudio() {
       <div className="flex min-h-screen flex-col lg:flex-row">
         <aside className="demo-sidebar sticky top-0 z-20 border-b border-[var(--color-line)] bg-white lg:fixed lg:inset-y-0 lg:flex lg:w-64 lg:flex-col lg:border-b-0 lg:border-r">
           <div className="flex items-center justify-between gap-3 px-4 py-4 lg:px-5 lg:py-5">
-            <Link href="/" aria-label="MarketBridge dashboard" className="focus-ring flex items-center gap-3 rounded-md"><span className="demo-logo grid h-10 w-10 place-items-center rounded-xl bg-[var(--color-brand)] font-[family-name:var(--font-display)] font-bold text-white">M</span><span><span className="block font-[family-name:var(--font-display)] text-base font-bold">MarketBridge</span><span className="block text-xs text-[var(--color-ink-muted)]">Legacy demo studio</span></span></Link>
+            <Link href="/" aria-label="KOJA payout home" className="focus-ring flex items-center gap-3 rounded-md"><span className="demo-logo grid h-10 w-10 place-items-center rounded-xl bg-[var(--color-brand)] font-[family-name:var(--font-display)] font-bold text-white">K</span><span><span className="block font-[family-name:var(--font-display)] text-base font-bold">KOJA</span><span className="block text-xs text-[var(--color-ink-muted)]">Legacy demo studio</span></span></Link>
             <span className="rounded-full border border-amber-200 bg-amber-50 px-2 py-1 text-[10px] font-bold uppercase tracking-wide text-amber-900">Demo</span>
           </div>
           <nav aria-label="Demo Studio sections" className="flex gap-1 overflow-x-auto px-3 pb-3 lg:flex-1 lg:flex-col lg:overflow-y-auto lg:overflow-x-hidden lg:px-3 lg:pt-4">

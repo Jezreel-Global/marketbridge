@@ -30,7 +30,7 @@ const steps = [
   },
 ];
 
-export function MarketBridgeLandingPage() {
+export function KojaLandingPage() {
   return (
     <div className="landing-page min-h-screen bg-[#f8faf7] text-[#15231d]">
       <section
@@ -41,7 +41,7 @@ export function MarketBridgeLandingPage() {
         <div className="mx-auto grid max-w-[1380px] items-center gap-8 px-5 pb-14 pt-10 sm:px-8 sm:pb-16 sm:pt-14 lg:min-h-[660px] lg:grid-cols-[minmax(0,.88fr)_minmax(0,1.12fr)] lg:gap-6 lg:px-12 lg:pb-16 lg:pt-12">
           <div className="relative z-10 max-w-2xl">
             <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-white/80 px-3 py-1.5 text-xs font-bold uppercase tracking-[.12em] text-emerald-900 sm:text-sm">
-              GDG Ilorin × Blaaiz Buildathon
+              KOJA · GDG Ilorin × Blaaiz Buildathon
             </p>
             <h1
               id="landing-title"
@@ -72,8 +72,8 @@ export function MarketBridgeLandingPage() {
             <p className="mt-5 flex max-w-lg items-start gap-2 text-sm leading-6 text-slate-600">
               <BeakerIcon aria-hidden="true" className="mt-0.5 size-5 shrink-0 text-emerald-800" />
               <span>
-                Demo mode only. Blaaiz sandbox access is pending; this page uses
-                sample values and does not move money.
+                Demo mode only. The builder has Blaaiz development dashboard
+                access, but this page uses sample values and does not move money.
               </span>
             </p>
           </div>

@@ -98,11 +98,12 @@ export default async function AdminPage() {
         aria-labelledby="blaaiz-status-title"
       >
         <h2 id="blaaiz-status-title" className="font-semibold">
-          Blaaiz sandbox: access pending · mock mode active
+          Blaaiz integration: not connected · mock mode active
         </h2>
         <p className="mt-1">
-          This demo does not currently authenticate with Blaaiz or call its payout
-          API. Estimates and status changes are illustrative; no funds move.
+          Development dashboard access is available, but this demo does not
+          authenticate with Blaaiz or call its payout API. Estimates and status
+          changes are illustrative; no funds move.
         </p>
         <p className="mt-1 text-xs">
           Provider connection requires provisioned sandbox OAuth credentials and
